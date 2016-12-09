@@ -1,6 +1,9 @@
-import React    from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import App      from './components/App.jsx';
+import routes from './components/routes.js';
+import { Router, Route, Link, hashHistory } from 'react-router';
 
-// mount our App at #container
-ReactDOM.render(<App />, document.querySelector('#root-container'));
+
+ReactDOM.render(
+  <Router history={hashHistory} routes={routes} />,
+document.querySelector('#root-container'));

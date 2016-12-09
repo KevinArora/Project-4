@@ -1,0 +1,116 @@
+.intro-pages {
+  height: 50vh;
+  width: 50vw;
+  border: 2px solid black;
+  top: 20vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  min-width: 300px;
+  min-height: 250px;
+}
+.intro-title {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+#link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+
+}
+
+/*body {
+
+  background-image: url(futurama_bg.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(350deg, #1b1c1e, #4c6a6e);
+  background-size: 200% 220%;
+  font-family: 'Oswald', sans-serif;
+  overflow: scroll;
+  what is making page static?
+  background-attachment: initial;
+}
+
+
+
+
+#form-container{
+   float: right;
+   border: 1px solid yellow;
+}
+
+.Box{
+  background-color: rgba(27,28,30,0.5);
+  align-self: center;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 60px auto;
+  border-radius: 8px;
+  border: 1px solid #444444;
+  overflow: scroll;
+  animation: ani .5s ease-in-out;
+    transform: scaleY(1);
+}
+
+@keyframes ani {
+  0% {
+    top: (0px);
+    transform: scaleX(0);
+  }
+  100% {
+    bottom: (100px);
+    transform: scaleX(1);
+  }
+}
+
+
+
+.login-inputContainer input{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+
+  border-radius: 4px;
+  height: 30px;
+  width: 100px;
+}
+
+.login-inputContainer button{
+  background-color: #64E279;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+
+.title h4{
+  cursor: pointer;
+  width: 90px;
+}
+
+
+
+.title h1 {
+  display: block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 70px;
+  align-self: flex-start;
+  align-items: center;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+*/

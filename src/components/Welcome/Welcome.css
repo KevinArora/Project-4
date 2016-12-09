@@ -1,0 +1,93 @@
+
+.wrapper{
+ height: 70vh;
+ width: 80vw;
+ border: 2px solid black;
+ top: 15vh;
+ right: 0;
+ bottom: 38px;
+ left: 0;
+ position: absolute;
+ min-width: 300px;
+ min-height: 250px;
+ border-radius: 5px;
+   background-image:url('https://s-media-cache-ak0.pinimg.com/originals/fb/fc/f2/fbfcf203ebcf935868874053d2b039e9.jpg');
+background-size: cover;
+
+}
+
+
+.grad1 {
+    height: 100vh;
+    width: 100vw;
+     /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#42b55d,#527a5b); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #42b55d,#527a5b); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#42b55d,#527a5b); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #42b55d,#527a5b); /* Standard syntax (must be last) */
+
+
+}
+
+#top{
+  padding-top: 50px;
+  margin-left: 550px;
+  color: white;
+
+}
+
+
+.login{
+  border: 2px solid white;
+  border-radius: 3px;
+  margin: 5px;
+  padding:2px;
+  text-decoration: none;
+  color: white;
+
+
+}
+
+.signup{
+border: 2px solid white;
+  border-radius: 3px;
+  margin: 5px;
+  padding:2px;
+  text-decoration: none;
+  color: white;
+
+
+}
+
+
+
+
+.container {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ position: relative;
+ align-items:flex-end
+
+
+}
+
+
+
+/*.container {
+ position: absolute;
+ width: 17rem;
+ height: 10rem;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+*/
+/*
+img{
+ padding:1px;
+ width:400px;
+ height: 300px;
+}
+*/
+

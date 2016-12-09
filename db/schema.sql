@@ -1,0 +1,46 @@
+BEGIN;
+
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS country;
+DROP TABLE IF EXISTS favorites;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  password VARCHAR NOT NULL,
+  country_id INT NOT NULL
+);
+
+CREATE TABLE country (
+  id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE favorites (
+  id SERIAL PRIMARY KEY,
+  user_id INT,
+  country_id INT,
+  songname VARCHAR NOT NULL
+);
+
+ALTER TABLE ONLY users
+ADD CONSTRAINT users_country_id_fkey
+FOREIGN KEY (country_id)
+REFERENCES country(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+
+ALTER TABLE ONLY favorites
+ADD CONSTRAINT favorites_user_id_fkey
+FOREIGN KEY (user_id)
+REFERENCES users(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+
+ALTER TABLE ONLY favorites
+ADD CONSTRAINT favorites_country_id_fkey
+FOREIGN KEY (country_id)
+REFERENCES country(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+
+COMMIT;
