@@ -1,4 +1,4 @@
-const pg       = require('pg-promise')({});
+const pgp = require('pg-promise')();
 
 const config = process.env.DATABASE_URL || {
   host: process.env.DB_HOST,
@@ -8,6 +8,6 @@ const config = process.env.DATABASE_URL || {
   password: process.env.DB_PASS
 };
 
-const db       = pg(pgConfig);
+const db = pgp(config);
 
 module.exports = db;

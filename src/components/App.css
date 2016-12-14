@@ -12,3 +12,25 @@ header h1 {
 #description-body {
   padding: 20px;
 }
+.map-selected {
+  fill: white;
+}
+
+.map-unselected {
+  fill: gray;
+  border:3px solid white;
+}
+
+.map-selected:hover, .map-unselected:hover {
+  cursor: pointer;
+}
+
+.map-container {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0; left:0;
+}
+
+

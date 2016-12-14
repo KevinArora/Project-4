@@ -1,4 +1,4 @@
-const db = require('../lib/dbConnect.js');
+const db = require('../db/db.js');
 
 function createUser(req, res, next) {
  db.one(`INSERT INTO users (name, password) VALUES ($1, $2) RETURNING *;`, [req.body.username, req.body.password])
@@ -19,7 +19,7 @@ db.one('SELECT * FROM users WHERE name = $1', [req.body.username])
 function authenticate(req, res, next) {
   if(res.rows.password === req.body.password){
     next();
-  }
+  } else (error) => next(error)
 
 }
 

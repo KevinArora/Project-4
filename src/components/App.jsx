@@ -12,7 +12,7 @@ class App extends Component {
     super();
     // console.log(this);
     this.state = {
-        signup: {
+      signup: {
         username: '',
         password: ''
       },
@@ -21,9 +21,27 @@ class App extends Component {
         username: '',
         password: '',
         id: ''
-      }
+      },
+      videos: [],
+      location: 'in'
     }
   }
+  handleClick(e){
+    this.setState({
+      location: e.target.value
+    })
+  }
+worldtube(Region){
+
+  fetch(`api/youtube/${Region}`)
+    .then(r => r.json())
+    .then(data=> {
+      this.setState({
+        videos: data
+      })
+      console.log(this.state.videos)
+    })
+}
 //rafa code from LE puppies
   //________________USERS________________
  //handles and updates all changes in the input field for sign up and
@@ -121,6 +139,7 @@ class App extends Component {
   render(){
   return (
       <div>
+      <button onClick={() => this.worldtube(this.state.location)}>click</button>
       <div>
 
         {this.props.children && React.cloneElement(this.props.children, {
@@ -132,7 +151,8 @@ class App extends Component {
           updateFormSignUsername: (event) => this.updateFormSignUpUsername(event),
           updateFormSignPassword: (event) => this.updateFormSignUpPassword(event),
           handleSign:()=> this.handleSignUp(),
-          handleLog:()=> this.handleLogIn()
+          handleLog:()=> this.handleLogIn(),
+
         })}
       </div>
 

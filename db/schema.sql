@@ -8,7 +8,7 @@ CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   password VARCHAR NOT NULL,
-  country_id INT NOT NULL
+  country_id INT
 );
 
 CREATE TABLE country (

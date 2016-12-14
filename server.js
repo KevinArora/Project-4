@@ -6,7 +6,6 @@ const path = require('path');
 const logger = require('morgan');
 const cookieParser  = require('cookie-parser');
 const usersRouter   = require('./routes/users');
-const authRouter    = require('./routes/auth');
 
 
 const dbRouter = require('./routes/db.js');
@@ -21,6 +20,5 @@ app.use(logger('dev'));
 
 app.listen(PORT, () => console.log('Server is listening on port', PORT));
 
-
-
 app.use('/users', usersRouter);
+app.use('/api/youtube', require('./routes/youtube.js'))
