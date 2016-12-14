@@ -5,6 +5,8 @@ import LoginForm from './Login/LoginForm.jsx';
 import Welcome from './Welcome/Welcome.jsx';
 import './normalize.css';
 import style from './App.css';
+import { Link } from 'react-router';
+
 
 // create a React Component called _App_
 class App extends Component {
@@ -23,21 +25,80 @@ class App extends Component {
         id: ''
       },
       videos: [],
-      location: 'in'
+      location: 'in',
+      na: "map-unselected",
+      sa: "map-unselected",
+      af: "map-unselected",
+      eu: "map-unselected",
+      as: "map-unselected",
+      oc: "map-unselected",
+      clicked: 'none',
+      selected: '',
     }
   }
+
+changeSelection(num) {
+    this.setState({
+      selected: this.state.videos[num],
+    });
+  }
+
+  onMapClick(area) {
+
+    let mapState1 = {
+      clicked: 'none',
+      na: "map-unselected",
+      sa: "map-unselected",
+      af: "map-unselected",
+      eu: "map-unselected",
+      as: "map-unselected",
+      oc: "map-unselected"
+    }
+    mapState1[area] = 'map-unselected';
+
+    let mapState2 = {
+      clicked: area,
+      na: "map-unselected",
+      sa: "map-unselected",
+      af: "map-unselected",
+      eu: "map-unselected",
+      as: "map-unselected",
+      oc: "map-unselected"
+    };
+    mapState2[area] = 'map-selected';
+
+    this.setState(
+      function() {
+        if (this.state.clicked === area) {
+          return mapState1;
+        } else {
+          return mapState2;
+        }
+      }
+    )
+    let yolo = ''
+    if(area == 'oc')yolo = 'AU'
+      if(area == 'na')yolo = 'US'
+        if(area == 'as')yolo = 'CN'
+          if(area == 'eu')yolo = 'GB'
+            if(area == 'sa')yolo = 'MX'
+              if(area == 'af')yolo = 'ZA'
+
+  this.worldtube(yolo)
+  }
+
   handleClick(e){
     this.setState({
       location: e.target.value
     })
   }
 worldtube(Region){
-
+console.log(Region)
   fetch(`api/youtube/${Region}`)
     .then(r => r.json())
     .then(data=> {
       this.setState({
-        videos: data
+        videos: data.items
       })
       console.log(this.state.videos)
     })
@@ -139,6 +200,7 @@ worldtube(Region){
   render(){
   return (
       <div>
+      <Link to "Signup">
       <button onClick={() => this.worldtube(this.state.location)}>click</button>
       <div>
 
@@ -152,6 +214,15 @@ worldtube(Region){
           updateFormSignPassword: (event) => this.updateFormSignUpPassword(event),
           handleSign:()=> this.handleSignUp(),
           handleLog:()=> this.handleLogIn(),
+          na: this.state.na,
+          sa: this.state.sa,
+          af: this.state.af,
+          eu: this.state.eu,
+          as: this.state.as,
+          oc: this.state.oc,
+          onMapClick: this.onMapClick.bind(this),
+          videos: this.state.videos,
+          changeSelection: this.changeSelection.bind(this)
 
         })}
       </div>

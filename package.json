@@ -2,7 +2,7 @@
   "name": "bobby-king-react-template",
   "version": "1.0.0",
   "description": "React application template using webpack",
-  "main": "server.js",
+  "main": "main.js",
   "private": true,
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules",
@@ -32,6 +32,7 @@
     "d3": "^4.4.0",
     "datamaps": "^0.5.8",
     "dotenv": "^2.0.0",
+    "electron": "^1.4.12",
     "express": "^4.14.0",
     "express-jwt": "^5.1.0",
     "gulp": "^3.9.1",
