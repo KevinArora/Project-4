@@ -5,13 +5,15 @@
 }
 
 body{
-  background-color: rebeccapurple;
+  background-color: black;
 }
 header {
   background-color: #393939;
   padding: 20px;
 }
-
+h1{
+  color:white;
+}
 header h1 {
   color: #FAFAFA;
   margin: 0;
@@ -39,23 +41,28 @@ header h1 {
   width: 100%;
   height: 100%;
   position: absolute;
-  top:0; left:0;
+  top:100px; left:0;
 }
 
 .row {
   display: inline-block;
-  background-color: red;
+  background-color: black;
   width: 70vw;
   height: 80vh;
+  /*position:absolute;*/
+  padding-top:150px;
 }
 
 .list-container {
-  background-color: blue;
+  background-color: black;
   display: inline-block;
   width: 30vw;
   /*height: 500px;*/
-  height: 80vh;
+  height: 100vh;
   overflow: auto;
+  position:absolute;
+ /* top:-500px;
+  left:900px;*/
 }
 .video-item {
   display: block;
@@ -65,10 +72,28 @@ header h1 {
   background: rgba(76,76,76,1);
   background: linear-gradient(135deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
 }
+.channel-title{
+
+}
+.Banner{
+  position:absolute;
+}
+.information{
+  position:absolute;
+  left:132px;
+  width:290px;
+}
+.video-image{
+  border:1px solid white;
+}
 
 .video-item h4 {
   margin: 0;
   padding: 0;
+}
+.pad-dat-shit{
+  position:absolute;
+  top:100px;
 }
 
 svg {

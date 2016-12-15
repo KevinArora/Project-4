@@ -9,6 +9,8 @@ export default class Sidebar extends Component {
     <Videolist
     changeSelection={this.props.changeSelection}
     videos={this.props.videos}
+    videoViews={this.props.videoViews}
+    getViews={this.props.getViews}
     />
 
     );

@@ -25,6 +25,7 @@ class App extends Component {
         id: ''
       },
       videos: [],
+      videoViews:'',
       location: 'in',
       na: "map-unselected",
       sa: "map-unselected",
@@ -83,7 +84,7 @@ changeSelection(num) {
     let yolo = ''
     if(area == 'oc')yolo = 'AU'
       if(area == 'na')yolo = 'US'
-        if(area == 'as')yolo = 'CN'
+        if(area == 'as')yolo = 'JP'
           if(area == 'eu')yolo = 'GB'
             if(area == 'sa')yolo = 'MX'
               if(area == 'af')yolo = 'ZA'
@@ -105,6 +106,20 @@ console.log(Region)
         videos: data.items
       })
       console.log(this.state.videos)
+    })
+}
+videoViews(id){
+// console.log(id)
+  fetch(`api/youtube/video/${id}`)
+    .then(r => r.json())
+    .then(data=> {
+      // console.log(data.items[0].statistics.viewCount)
+      // return data.items[0].statistics.viewCount;
+
+      this.setState({
+        videoViews: data.items[0].statistics.viewCount
+      })
+      // console.log(this.state.videoViews)
     })
 }
 //rafa code from LE puppies
@@ -210,7 +225,7 @@ loginCheck(){
       <div>
         {this.loginCheck()}
 
-      <button onClick={() => this.worldtube(this.state.location)}>click</button>
+
       <div>
 
         {this.props.children && React.cloneElement(this.props.children, {
@@ -231,7 +246,9 @@ loginCheck(){
           oc: this.state.oc,
           onMapClick: this.onMapClick.bind(this),
           videos: this.state.videos,
-          changeSelection: this.changeSelection.bind(this)
+          changeSelection: this.changeSelection.bind(this),
+          getViews:this.videoViews,
+          videoViews:this.state.videoViews
 
         })}
       </div>
