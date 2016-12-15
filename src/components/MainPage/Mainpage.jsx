@@ -4,7 +4,7 @@ import Sidebar from '../sidebar/sidebar.jsx'
 export default class MainPage extends Component{
   render(){
     return(
-      <div>
+      <div className='synclair-is-grumpy'>
         <h1>eat shit friend</h1>
         <WorldMap
           na={this.props.na}
