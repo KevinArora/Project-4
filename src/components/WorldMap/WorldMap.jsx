@@ -27,7 +27,7 @@ export default class WorldMap extends Component {
 
 
 
-
+//credit to Heather Booker who made react-world-map on NPM. credit to bobby for fixing this shit
   render(){
     return(
       <div className='row'>

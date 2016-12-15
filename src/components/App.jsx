@@ -5,7 +5,7 @@ import LoginForm from './Login/LoginForm.jsx';
 import Welcome from './Welcome/Welcome.jsx';
 import './normalize.css';
 import style from './App.css';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 
 // create a React Component called _App_
@@ -36,6 +36,10 @@ class App extends Component {
       selected: '',
     }
   }
+
+  // componentWillMount() {
+  //   browserHistory.push('/signup/#')
+  // }
 
 changeSelection(num) {
     this.setState({
@@ -193,14 +197,19 @@ console.log(Region)
   onSuccessfulLogIn(a,b) {
     console.log(a,b);
   }
-
+loginCheck(){
+  if(this.state.login.username == '') {
+    return <Link to="signup" >Sign up</Link>
+  }
+}
  /*this.props.children passes the included items as state for all child functions
   kind of inefficient but we needed to pass state to unrendered components on separate routes*/
 
   render(){
   return (
       <div>
-      <Link to "Signup">
+        {this.loginCheck()}
+
       <button onClick={() => this.worldtube(this.state.location)}>click</button>
       <div>
 
