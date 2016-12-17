@@ -23,16 +23,22 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'ReactJS Hello World',
+      title: 'Alarina',
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),
       appMountId: 'root-container'
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      },
+    }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true
     })
   ],
+
 
   module : {
     include: path.join(__dirname, 'src'),

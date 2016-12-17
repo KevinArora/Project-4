@@ -1,3 +1,4 @@
+# Implemented from Bobby Kind's PERN_template_master
 #!/bin/bash
 # @author Jason Seminara for General Assembly, 2016
 # NPM has some weird ideas about which scripts it likes to fire off when deploying.
