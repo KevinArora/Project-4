@@ -1,4 +1,4 @@
-const db = require('../db/db.js');
+const db = require('../lib/db.js');
 
 function createUser(req, res, next) {
  db.one(`INSERT INTO users (name, password) VALUES ($1, $2) RETURNING *;`, [req.body.username, req.body.password])
