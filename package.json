@@ -4,6 +4,10 @@
   "description": "React application template using webpack",
   "main": "main.js",
   "private": true,
+  "main": "server.js",
+  "engines": {
+    "node": "6.6.0"
+  },
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules",
     "heroku-prebuild": "bash ./scripts/deployment_react.sh",
