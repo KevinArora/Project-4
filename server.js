@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const logger = require('morgan');
 // const history = require('connect-history-api-fallback');
-const cookieParser  = require('cookie-parser');
+// const cookieParser  = require('cookie-parser');
 const usersRouter   = require('./routes/users');
 
 

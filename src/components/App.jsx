@@ -126,98 +126,98 @@ videoViews(id){
 //rafa code from LE puppies
   //________________USERS________________
  //handles and updates all changes in the input field for sign up and
-  updateFormSignUpUsername(e) {
-    console.log(e.target.value);
-    this.setState({
-      signup: {
-        username: e.target.value,
-        password: this.state.signup.password
-      }
-    });
-  }
- //handles updates for all changes in the input field
-  updateFormSignUpPassword(e) {
-    console.log(e.target.value);
-    this.setState({
-      signup: {
-        username: this.state.signup.username,
-        password: e.target.value
-      }
-    });
-  }
-  //handles changes for the username login field
-  updateFormLogInUsername(e) {
-    console.log(e.target.value);
-    this.setState({
-      login: {
-        username: e.target.value,
-        password: this.state.login.password
-      }
-    });
-  }
-  //handles all changes for the login password field
-  updateFormLogInPassword(e) {
-    console.log(e.target.value);
-    this.setState({
-      login: {
-        username: this.state.login.username,
-        password: e.target.value
-      }
-    });
-  }
- //posts new user credentials to the DB via fetch
-  handleSignUp() {
-    fetch('/users/signup', {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        username: this.state.signup.username,
-        password: this.state.signup.password
-      })
-    })
-    .then(r => r.json())
-    .then((data) => console.log(data))
-    .then(() => console.log('You have signed up!'))
-    .catch(err => console.log(err));
-  }
- //fetches credentials which undergoes authentication before coming over.
-  handleLogIn() {
-    console.log('test');
-    fetch('/users/login', {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        username: this.state.login.username,
-        password: this.state.login.password
-      })
-    })
-    .then(r => r.json())
-    .then((data) => {
-      this.setState({
-      login: {
-        username: data.name,
-        password: data.password,
-        id: data.id,
-      }
+//   updateFormSignUpUsername(e) {
+//     console.log(e.target.value);
+//     this.setState({
+//       signup: {
+//         username: e.target.value,
+//         password: this.state.signup.password
+//       }
+//     });
+//   }
+//  //handles updates for all changes in the input field
+//   updateFormSignUpPassword(e) {
+//     console.log(e.target.value);
+//     this.setState({
+//       signup: {
+//         username: this.state.signup.username,
+//         password: e.target.value
+//       }
+//     });
+//   }
+//   //handles changes for the username login field
+//   updateFormLogInUsername(e) {
+//     console.log(e.target.value);
+//     this.setState({
+//       login: {
+//         username: e.target.value,
+//         password: this.state.login.password
+//       }
+//     });
+//   }
+//   //handles all changes for the login password field
+//   updateFormLogInPassword(e) {
+//     console.log(e.target.value);
+//     this.setState({
+//       login: {
+//         username: this.state.login.username,
+//         password: e.target.value
+//       }
+//     });
+//   }
+//  //posts new user credentials to the DB via fetch
+//   handleSignUp() {
+//     fetch('/users/signup', {
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       method: 'POST',
+//       body: JSON.stringify({
+//         username: this.state.signup.username,
+//         password: this.state.signup.password
+//       })
+//     })
+//     .then(r => r.json())
+//     .then((data) => console.log(data))
+//     .then(() => console.log('You have signed up!'))
+//     .catch(err => console.log(err));
+//   }
+//  //fetches credentials which undergoes authentication before coming over.
+//   handleLogIn() {
+//     console.log('test');
+//     fetch('/users/login', {
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       method: 'POST',
+//       body: JSON.stringify({
+//         username: this.state.login.username,
+//         password: this.state.login.password
+//       })
+//     })
+//     .then(r => r.json())
+//     .then((data) => {
+//       this.setState({
+//       login: {
+//         username: data.name,
+//         password: data.password,
+//         id: data.id,
+//       }
 
-    })})
-    .then(console.log(this.state.login.id))
-    .then(console.log('succesful login'))
-    .catch(err => console.log(err));
-  }
- //when login is a success
-  onSuccessfulLogIn(a,b) {
-    console.log(a,b);
-  }
-loginCheck(){
-  if(this.state.login.username == '') {
-    return <Link to="signup" >Sign up</Link>
-  }
-}
+//     })})
+//     .then(console.log(this.state.login.id))
+//     .then(console.log('succesful login'))
+//     .catch(err => console.log(err));
+//   }
+//  //when login is a success
+//   onSuccessfulLogIn(a,b) {
+//     console.log(a,b);
+//   }
+// loginCheck(){
+//   if(this.state.login.username == '') {
+//     return <Link to="signup" >Sign up</Link>
+//   }
+// }
  /*this.props.children passes the included items as state for all child functions
   kind of inefficient but we needed to pass state to unrendered components on separate routes*/
 
