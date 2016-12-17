@@ -12,7 +12,7 @@ const usersRouter   = require('./routes/users');
 const dbRouter = require('./routes/db.js');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.argv[2] || process.env.PORT || 3000;
 
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'dist')));
