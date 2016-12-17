@@ -6,6 +6,7 @@ import Welcome from './Welcome/Welcome.jsx';
 import './normalize.css';
 import style from './App.css';
 import { Link, browserHistory } from 'react-router';
+import MainPage from './MainPage/Mainpage.jsx';
 
 
 // create a React Component called _App_
@@ -223,7 +224,7 @@ loginCheck(){
   render(){
   return (
       <div>
-        {this.loginCheck()}
+        <MainPage />
 
 
       <div>
