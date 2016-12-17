@@ -1,7 +1,6 @@
 {
   "name": "bobby-king-react-template",
   "version": "1.0.0",
-
   "description": "React application template using webpack",
   "main": "main.js",
   "private": true,
@@ -25,6 +24,7 @@
   "homepage": "https://github.com/gittheking/react_template#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "html-webpack-plugin": "^2.24.1",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
     "pg-promise": "^5.2.7"
