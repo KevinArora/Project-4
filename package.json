@@ -2,9 +2,8 @@
   "name": "bobby-king-react-template",
   "version": "1.0.0",
   "description": "React application template using webpack",
-  "main": "main.js",
-  "private": true,
   "main": "server.js",
+  "private": true,
   "engines": {
     "node": "6.6.0"
   },
@@ -42,6 +41,7 @@
     "babel-plugin-transform-strict-mode": "^6.11.3",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.23.1",
     "dotenv": "^2.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
