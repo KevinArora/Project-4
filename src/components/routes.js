@@ -6,7 +6,7 @@ import SignupForm from './Signup/SignupForm.jsx';
 import { Route, IndexRoute } from 'react-router';
 // import WorldMap from './WorldMap/WorldMap.jsx'
 import MainPage from './MainPage/Mainpage.jsx'
-var WorldMap = require('react-world-map');
+// var WorldMap = require('react-world-map');
 // import MapView from "./MapView/MapView.jsx";
 // <MapView {...props} />
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-var Worldo = require('react-world-map');
+// var Worldo = require('react-world-map');
 import datamap from '../basic-example.jsx'
 
 export default class WorldMap extends Component {
