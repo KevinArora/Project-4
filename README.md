@@ -8,14 +8,16 @@
 WorldTube lets you click on any region (SOON TO BE COUNTRY) and pull their trending videos strictly based on their clicks over time in a certain release window. Don't let your memes be dreams friends.
 
 #User stories:
-As a user i want to be able to quickly retrieve lists of videos trending
-As a user i want to be able to take advantage of visual input via click, typing is boring
-As a user i want to be able to view the pull videos (tbd heroku destroying react-youtube module)
-As a user i want charts and other forms of data representation to show trends.
+- As a user i want to be able to quickly retrieve lists of videos trending  
+- As a user i want to be able to take advantage of visual input via click, typing is boring  
+- As a user i want to be able to view the pull videos (tbd heroku destroying react-youtube module)
+- As a user i want charts and other forms of data representation to show trends.
 
 #General Approach:
+ I chose to do a react app because i felt less comfortable with it and that meant i couldnt use a couple of jquery map rendering tools like jvectormap. Trying to find a way to render a clickable map and spotify's charts api being down were major hurdles in my endeavor so jumped to itunes and then landed on the youtube API. i used react-world-map module to get a map to render and start working on functionality but after most of the crud stuff is in place i realized i couldnt alter the modules size or styles leaving it very sore on the eyes. From here i set off to find a better svg file. One with countries because the now implemented youtube API takes country ISO2 codes. This meant that youtube can show the videos trending in any country...baring the ones taking part in the current political landscape. 
+
  I tried to get an svg file where if click can pass a value to the youtube api fetch which populates a list on the right side of the application. the app makes 2 api calls because the youtube data is pretty big and is stored in different parts such as "snippet" and "statistics"
- the list items are clickable and fornow log the video ID which was being passed into react-youtube(npm module) which then opens the video for view.
+ the list items are clickable and fornow log the video ID which was being passed into react-youtube(npm module) which then opens the video for view. The react-youtube was something which was used by NSTD during project 3 and it seemed pretty straightforward to use.
 #ERD:
 ![erds boi](./ERD.png)
 
