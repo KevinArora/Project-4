@@ -16,10 +16,10 @@ As a user i want charts and other forms of data representation to show trends.
  I tried to get an svg file where if click can pass a value to the youtube api fetch which populates a list on the right side of the application. the app makes 2 api calls because the youtube data is pretty big and is stored in different parts such as "snippet" and "statistics"
  the list items are clickable and fornow log the video ID which was being passed into react-youtube(npm module) which then opens the video for view.
 #ERD:
-![erds boi](https://wireframe.cc/pOUQFc)
+![erds boi](./ERD.png)
 
 #Blueprints:
-![blueprints](https://wireframe.cc/K1kfVO)
+![blueprints](./blueprint.png)
 
 ![Original pitch](https://git.generalassemb.ly/wdi-nyc-60/project-4/issues/47)
 
