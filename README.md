@@ -3,6 +3,7 @@
     Its pull of paid promotional crap and theres no quick way to check for each country
 
     this app changes the game.
+    try it at https://worldtube.herokuapp.com/
 ![screen shot](./screenshot.png)
 WorldTube lets you click on any region (SOON TO BE COUNTRY) and pull their trending videos strictly based on their clicks over time in a certain release window. Don't let your memes be dreams friends.
 
